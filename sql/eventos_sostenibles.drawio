@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 OPR/118.0.0.0" version="27.0.6">
+  <diagram name="Modelo ER - Eventos Sostenibles" id="modeloER">
+    <mxGraphModel dx="1621" dy="1959" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Usuario" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Usuario&lt;/div&gt;&lt;div&gt;&lt;br&gt;id_usuario (PK)&lt;br&gt;nombre&lt;br&gt;email&lt;br&gt;password&lt;/div&gt;" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="-200" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Organizador" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;Organizador&lt;div&gt;&lt;br&gt;id_organizador (PK)&lt;br&gt;nombre&lt;br&gt;contacto&lt;/div&gt;" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="280" y="280" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Categoria" value="&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Categoria&lt;/div&gt;&lt;div&gt;&lt;br&gt;id_categoria (PK)&lt;br&gt;nombre&lt;/div&gt;" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1210" y="-80" width="180" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Ubicacion" value="&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Ubicación&lt;/div&gt;&lt;div&gt;&lt;br&gt;id_ubicacion (PK)&lt;br&gt;tipo&lt;br&gt;direccion&lt;br&gt;enlace_online&lt;/div&gt;" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="827" y="320" width="183" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Evento" value="&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Evento&lt;/div&gt;&lt;div&gt;&lt;br&gt;id_evento (PK)&lt;br&gt;nombre&lt;br&gt;fecha&lt;br&gt;duracion_horas&lt;br&gt;descripcion&lt;br&gt;imagen_url&lt;br&gt;id_categoria (FK)&lt;br&gt;id_ubicacion (FK)&lt;br&gt;id_organizador (FK)&lt;/div&gt;" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="810" y="-110" width="230" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Inscripcion" value="&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Inscripcion&lt;/div&gt;&lt;div&gt;&lt;br&gt;id_usuario (PK, FK)&lt;br&gt;id_evento (PK, FK)&lt;br&gt;fecha_insc&lt;/div&gt;" style="shape=swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="304" y="-60" width="200" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" style="endArrow=block;html=1;" parent="1" source="Evento" target="Categoria" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" style="endArrow=block;html=1;" parent="1" source="Evento" target="Ubicacion" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" style="endArrow=block;html=1;" parent="1" source="Evento" target="Organizador" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" style="endArrow=block;html=1;" parent="1" source="Inscripcion" target="Evento" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" style="endArrow=block;html=1;" parent="1" source="Inscripcion" target="Usuario" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
