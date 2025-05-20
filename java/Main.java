@@ -1,15 +1,44 @@
 public class Main {
     public static void main(String[] args) {
-        Categoria cat = new Categoria(1, "Taller");
-        Ubicacion ubi = new Ubicacion(1, "Presencial", "Centro Verde, Madrid");
-        Organizador org = new Organizador(1, "EcoOrganiza", "eco@org.com");
+        Categoria cat1 = new Categoria(1, "Taller de Compostaje Casero");
+        Ubicacion ubi1 = new Ubicacion(1, "Presencial", "Centro Verde, Madrid");
+        Organizador org1 = new Organizador(1, "Asociacion Huerta Viva", "eco@org.com");
 
-        Evento e1 = new Evento(1, "Taller de Reciclaje", "2025-07-02", 3, cat, ubi, org);
-        Evento e2 = new Evento(2, "Jornada Reforestación", "2025-08-10", 4, cat, ubi, org);
+        Categoria cat2 = new Categoria(2, "Jornada de Reforestación");
+        Ubicacion ubi2 = new Ubicacion(2, "Presencial", "Parque Natural El Robledal");
+        Organizador org2 = new Organizador(2, "Fundación Árbol Vivo", "eco@org.com");
 
+        Categoria cat3 = new Categoria(3, "Feria Sostenible Local");
+        Ubicacion ubi3 = new Ubicacion(3, "Presencial", "Plaza Mayor de Alcobendas");
+        Organizador org3 = new Organizador(3, "Ayuntamiento de Alcobendas", "eco@org.com");
+
+        Categoria cat4 = new Categoria(4, "Conferencia Energías Renovables");
+        Ubicacion ubi4 = new Ubicacion(4, "Online - Zoom", " https://zoom.us/j/123456789");
+        Organizador org4 = new Organizador(4, "Energía Limpia Global", "eco@org.com");
+
+        Categoria cat5 = new Categoria(5, "EcoTaller de Reciclaje");
+        Ubicacion ubi5 = new Ubicacion(5, "Presencial", "Centro Cultural La Estación");
+        Organizador org5 = new Organizador(5, "Red Verde", "eco@org.com");
+
+        Categoria cat6 = new Categoria(6, "Conferencia Verde");
+        Ubicacion ubi6 = new Ubicacion(6, "Online (Zoom)", "https://zoom.us/j/123456789");
+        Organizador org6 = new Organizador(6, "EcoFuture", "eco@org.com");
+        
+
+        Evento e1 = new Evento(1, "Taller de Compostaje Casero", "2025-10-20", 3, cat1, ubi1, org1);
+        Evento e2 = new Evento(2, "Jornada Reforestación", "2025-08-10", 4, cat2, ubi2, org2);
+        Evento e3 = new Evento(3, "Feria Sostenible", "2025-10-05", 2, cat3, ubi3, org3);
+        Evento e4 = new Evento(4, "Conferencia Energías Renovables", "2025-09-15", 3, cat4, ubi4, org4);
+        Evento e5 = new Evento(5, "EcoTaller de Reciclaje", "2025-07-02", 4, cat5, ubi5, org5);
+        Evento e6 = new Evento(6, "Conferencia Verde", "2025-06-15", 2, cat6, ubi6, org6);
         GestorEventos gestor = new GestorEventos(10);
         gestor.agregarEvento(e1);
         gestor.agregarEvento(e2);
+        gestor.agregarEvento(e3);
+        gestor.agregarEvento(e4);
+        gestor.agregarEvento(e5);
+        gestor.agregarEvento(e6);
+        
 
         System.out.println(" Lista de Eventos:");
         gestor.listarEventos();

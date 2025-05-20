@@ -18,7 +18,7 @@ CREATE TABLE Categoria (
 
 CREATE TABLE Ubicacion (
   id_ubicacion INT PRIMARY KEY AUTO_INCREMENT,
-  tipo VARCHAR(20) NOT NULL,
+  tipo ENUM('Presencial', 'Online') NOT NULL,
   direccion VARCHAR(255),
   enlace_online VARCHAR(255)
 );
